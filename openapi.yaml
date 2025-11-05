@@ -1,0 +1,27 @@
+swagger: "2.0"
+info:
+  title: "Flask API"
+  description: "API serverless simple"
+  version: "1.0.0"
+schemes:
+  - "https"
+produces:
+  - "application/json"
+x-google-backend:
+  address: https://flask-api-733395173043.europe-west1.run.app
+  protocol: h2
+paths:
+  /api/hello:
+    get:
+      summary: "Retourne un message de bienvenue (via /api)"
+      operationId: "hello_api"
+      responses:
+        200:
+          description: "Succès"
+          schema:
+            type: "object"
+            properties:
+              message:
+                type: "string"
+              status:
+                type: "string"
