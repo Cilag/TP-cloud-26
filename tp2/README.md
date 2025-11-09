@@ -103,11 +103,6 @@ git init
  git push -u origin main
 ```
 
-Optionnel : GitHub Pages pour le frontend
-- Créez un dossier `docs/` et placez `index.html` + `script.js` dedans
-- Activez GitHub Pages sur la branche `main`, dossier `/docs`
-- Mettez `API_URL` à l’URL Cloud Run (HTTPS)
-
 ## Dépannage
 - CORS: `Flask-Cors` est activé. Évitez d’ajouter des headers inutiles (ex: `Content-Type` sur GET) qui déclenchent un preflight.
 - Ports occupés: changez de port (`app.run(port=8081)`), adaptez l’URL.
