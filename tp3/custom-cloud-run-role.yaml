@@ -1,0 +1,12 @@
+title: "Custom Cloud Run Deployer"
+description: "Permet de deployer, lister et supprimer des services Cloud Run"
+stage: "GA"
+includedPermissions:
+- run.services.create
+- run.services.delete
+- run.services.get
+- run.services.list
+- run.services.update
+- run.operations.get
+- run.operations.list
+- run.locations.list

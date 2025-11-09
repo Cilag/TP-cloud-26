@@ -1,0 +1,18 @@
+creationTimestamp: '2025-11-05T02:39:47.902-08:00'
+defaultService: https://www.googleapis.com/compute/v1/projects/tp2cloud-477309/global/backendBuckets/mon-backend-bucket
+fingerprint: GUt25cFKV4o=
+hostRules:
+- hosts:
+  - '*'
+  pathMatcher: api-matcher
+id: 2326870549405800348
+kind: compute#urlMap
+name: mon-url-map
+pathMatchers:
+- defaultService: https://www.googleapis.com/compute/v1/projects/tp2cloud-477309/global/backendBuckets/mon-backend-bucket
+  name: api-matcher
+  pathRules:
+  - paths:
+    - /api/*
+    service: https://www.googleapis.com/compute/v1/projects/tp2cloud-477309/global/backendServices/api-backend
+selfLink: https://www.googleapis.com/compute/v1/projects/tp2cloud-477309/global/urlMaps/mon-url-map

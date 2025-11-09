@@ -1,4 +1,4 @@
-const API_URL = 'https://34.160.169.199.nip.io/api/hello';
+const API_URL = 'https://flask-api-gateway-9cx0jt83.ew.gateway.dev/hello';
 const button = document.getElementById('callApiBtn');
 const responseDiv = document.getElementById('response');
 async function callApi() {

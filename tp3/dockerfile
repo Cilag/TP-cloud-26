@@ -1,0 +1,23 @@
+# Dockerfile
+# Utiliser une image de base officielle Python légère
+FROM python:3.11-slim
+
+# Définir le répertoire de travail dans le conteneur
+WORKDIR /app
+
+# Copier les dépendances et les installer
+# Ceci permet de mettre en cache la couche d'installation des dépendances
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copier le reste du code source de l'application
+COPY api.py .
+
+# Exposer le port (Cloud Run utilise la variable d'environnement PORT,
+# mais l'instruction EXPOSE est une bonne pratique)
+EXPOSE 8080
+
+# Définir la commande d'exécution. Gunicorn est le serveur WSGI recommandé
+# pour la production, il écoute sur la variable d'environnement PORT
+# La syntaxe est gunicorn --bind :$PORT <nom_du_module>:<nom_de_l_instance_Flask>
+CMD exec gunicorn --bind :$PORT --workers 1 api:app
