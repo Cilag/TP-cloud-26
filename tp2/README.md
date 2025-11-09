@@ -92,17 +92,6 @@ Mettez à jour `script.js` avec cette URL :
 const API_URL = 'https://flask-api-xxxxxx.europe-west1.run.app/hello';
 ```
 
-## Publication sur GitHub
-
-```powershell
-git init
- git add .
- git commit -m "TP2: API Flask /hello + front + Dockerfile"
- git branch -M main
- git remote add origin https://github.com/<votre-utilisateur>/<votre-repo>.git
- git push -u origin main
-```
-
 ## Dépannage
 - CORS: `Flask-Cors` est activé. Évitez d’ajouter des headers inutiles (ex: `Content-Type` sur GET) qui déclenchent un preflight.
 - Ports occupés: changez de port (`app.run(port=8081)`), adaptez l’URL.
